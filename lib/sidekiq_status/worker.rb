@@ -14,7 +14,7 @@ module SidekiqStatus
     end
 
     module Prepending
-      def perform(jid)
+      def perform(jid, *args)
         @status_container = SidekiqStatus::Container.load(jid)
 
         begin
